@@ -1,0 +1,62 @@
+{
+  "name": "Workout",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the workout, e.g., 'Day 1: Foundation'"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the workout is intended for"
+    },
+    "focus_scripture": {
+      "type": "string",
+      "description": "A scripture verse to meditate on during the workout"
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief overview of the workout's purpose or theme"
+    },
+    "warmup": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of warm-up exercises"
+    },
+    "main_set": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "exercise": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string",
+            "description": "e.g., '4 sets of 8-10 reps'"
+          }
+        }
+      },
+      "description": "The main exercises for the workout"
+    },
+    "cooldown": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of cool-down exercises or stretches"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL for a relevant image for the workout"
+    }
+  },
+  "required": [
+    "title",
+    "date",
+    "main_set"
+  ]
+}
