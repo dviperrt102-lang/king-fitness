@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700&family=Barlow:wght@400;500;600;700&family=Rubik+Distressed&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,9 +31,9 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --font-heading: ui-sans-serif, system-ui, sans-serif;
-    --font-body: ui-sans-serif, system-ui, sans-serif;
-    --font-display: ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Barlow Condensed', 'Arial Narrow', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Barlow', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Rubik Distressed', 'Barlow Condensed', ui-sans-serif, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -88,5 +90,24 @@
 
   body {
     @apply bg-background text-foreground font-body;
+    font-weight: 500;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 0.95;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 800;
   }
 }

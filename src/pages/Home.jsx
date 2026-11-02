@@ -39,7 +39,7 @@ export default function HomePage() {
             Empowering men to build spiritual foundations, physical strength, and unwavering leadership in their homes and communities.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" className="bg-white text-black hover:bg-white/90 h-12 px-8 text-lg uppercase tracking-wider font-bold">
+            <Button size="lg" className="font-heading bg-white text-black hover:bg-white/90 h-12 px-8 text-2xl uppercase tracking-widest font-bold">
               Join the Brotherhood
             </Button>
           </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
               Here, you'll find accountability, encouragement, and the tools to grow into the man God created you to be. It's not about being perfect; it's about the relentless pursuit of Him.
             </p>
             <Link to={createPageUrl("Workouts")}>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black h-12 px-8 text-lg uppercase tracking-wider font-bold">
+                <Button variant="outline" size="lg" className="font-heading border-white text-white hover:bg-white hover:text-black h-12 px-8 text-2xl uppercase tracking-widest font-bold">
                     View Workouts
                 </Button>
             </Link>

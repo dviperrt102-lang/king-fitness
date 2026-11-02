@@ -15,12 +15,6 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
-      `}</style>
-      
       <header className="sticky top-0 z-50 bg-black backdrop-blur-lg border-b border-white/20">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-32 md:h-36">
@@ -36,7 +30,7 @@ export default function Layout({ children, currentPageName }) {
                 <Link
                   key={item.title}
                   to={item.url}
-                  className={`text-sm font-medium uppercase tracking-widest transition-colors ${
+                  className={`font-heading text-lg uppercase tracking-widest transition-colors ${
                     location.pathname === item.url
                       ? "text-white"
                       : "text-white/70 hover:text-white"
