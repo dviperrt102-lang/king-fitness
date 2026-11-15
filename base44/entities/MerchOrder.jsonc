@@ -1,0 +1,144 @@
+{
+  "name": "MerchOrder",
+  "type": "object",
+  "properties": {
+    "order_ref": {
+      "type": "string",
+      "description": "Internal reference created before checkout; also sent to Stripe as metadata"
+    },
+    "stripe_session_id": {
+      "type": "string",
+      "description": "Stripe Checkout session that paid for this order"
+    },
+    "product_key": {
+      "type": "string",
+      "description": "Server catalog key of the purchased product"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Product name as shown to the customer"
+    },
+    "size": {
+      "type": "string",
+      "description": "Selected size, empty for one-size items"
+    },
+    "color": {
+      "type": "string",
+      "description": "Selected color"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of items ordered"
+    },
+    "sync_variant_id": {
+      "type": "string",
+      "description": "Printful sync variant resolved at checkout, used to create the fulfillment order"
+    },
+    "amount_total": {
+      "type": "number",
+      "description": "Total charged in cents: product plus estimated shipping"
+    },
+    "shipping_amount": {
+      "type": "number",
+      "description": "Estimated Printful shipping cost in cents"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code, e.g. usd"
+    },
+    "customer_email": {
+      "type": "string",
+      "description": "Buyer email for the order"
+    },
+    "recipient_name": {
+      "type": "string",
+      "description": "Shipping recipient name"
+    },
+    "recipient_address1": {
+      "type": "string",
+      "description": "Shipping street address"
+    },
+    "recipient_address2": {
+      "type": "string",
+      "description": "Shipping address line 2"
+    },
+    "recipient_city": {
+      "type": "string",
+      "description": "Shipping city"
+    },
+    "recipient_state": {
+      "type": "string",
+      "description": "Shipping state or province code"
+    },
+    "recipient_zip": {
+      "type": "string",
+      "description": "Shipping postal code"
+    },
+    "recipient_country": {
+      "type": "string",
+      "description": "Shipping country code"
+    },
+    "recipient_phone": {
+      "type": "string",
+      "description": "Shipping phone number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "awaiting_payment",
+        "pending",
+        "submitted",
+        "needs_attention"
+      ],
+      "enumColors": [
+        "gray",
+        "yellow",
+        "green",
+        "red"
+      ],
+      "default": "awaiting_payment",
+      "description": "Order lifecycle: waiting on the Stripe session, paid and waiting, fulfilled by Printful, or requires attention"
+    },
+    "printful_order_id": {
+      "type": "string",
+      "description": "Printful order ID once the fulfillment order is created"
+    },
+    "printful_error": {
+      "type": "string",
+      "description": "Last Printful error, if fulfillment failed"
+    },
+    "paid_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When Stripe confirmed payment"
+    }
+  },
+  "required": [
+    "product_key",
+    "product_name",
+    "quantity",
+    "status"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

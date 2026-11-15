@@ -8,6 +8,7 @@ export const LOGO_URL =
 const navigationItems = [
   { title: "Home", url: createPageUrl("Home") },
   { title: "The Book", url: createPageUrl("Book") },
+  { title: "Merch", url: createPageUrl("Merch") },
   { title: "Workouts", url: createPageUrl("Workouts") },
   { title: "Devotionals", url: createPageUrl("Devotionals") },
   { title: "Community", url: createPageUrl("Community") },
