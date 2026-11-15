@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { base44 } from "@/api/base44Client";
 import { Heart, Brain, Cross, Crown, Target, Dumbbell, Users, BookOpen } from "lucide-react";
 
 const insideParts = [
@@ -45,6 +46,37 @@ const pillars = [
 ];
 
 export default function Book() {
+  const [checkingOut, setCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState("");
+
+  const handleBuyPdf = async () => {
+    setCheckoutError("");
+    const isFramed = window.self !== window.top;
+    // Open the tab synchronously inside the click so popup blockers keep the user activation.
+    const checkoutTab = isFramed ? window.open("", "_blank") : null;
+    if (isFramed && !checkoutTab) {
+      setCheckoutError("Allow popups for this site to continue to checkout.");
+      return;
+    }
+    if (checkoutTab) checkoutTab.opener = null;
+
+    setCheckingOut(true);
+    try {
+      const res = await base44.functions.invoke("createPdfCheckout", {});
+      const url = res.data?.url;
+      if (!url) throw new Error(res.data?.error || "Checkout is unavailable right now.");
+      if (checkoutTab) {
+        checkoutTab.location.replace(url);
+      } else {
+        window.location.assign(url);
+      }
+    } catch (error) {
+      checkoutTab?.close();
+      setCheckoutError(error?.response?.data?.error || error.message || "Checkout is unavailable right now.");
+      setCheckingOut(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero */}
@@ -163,17 +195,20 @@ export default function Book() {
               <p className="text-white/60 leading-relaxed mb-6">
                 Instant download — read on any device
               </p>
-              {/* TODO: wire to Stripe checkout once the PDF is uploaded and Stripe is connected in Base44. */}
               <Button
                 size="lg"
-                disabled
-                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold opacity-50 cursor-not-allowed mt-auto"
+                onClick={handleBuyPdf}
+                disabled={checkingOut}
+                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold hover:bg-white/90 mt-auto disabled:opacity-60"
               >
-                Buy the PDF — $9.99
+                {checkingOut ? "Opening Checkout…" : "Buy the PDF — $9.99"}
               </Button>
               <p className="font-heading text-xs uppercase tracking-widest text-white/40 mt-3">
-                Checkout coming soon
+                Instant download after payment
               </p>
+              {checkoutError && (
+                <p className="text-sm text-white/70 mt-3">{checkoutError}</p>
+              )}
             </div>
           </div>
 

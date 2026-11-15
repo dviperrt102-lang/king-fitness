@@ -11,6 +11,7 @@ import Book from './pages/Book';
 import Workouts from './pages/Workouts';
 import Devotionals from './pages/Devotionals';
 import Community from './pages/Community';
+import BookSuccess from './pages/BookSuccess';
 import Layout from './Layout';
 // Add page imports here
 
@@ -46,6 +47,7 @@ const AuthenticatedApp = () => {
       <Route path="/Workouts" element={<Layout><Workouts /></Layout>} />
       <Route path="/Devotionals" element={<Layout><Devotionals /></Layout>} />
       <Route path="/Community" element={<Layout><Community /></Layout>} />
+      <Route path="/BookSuccess" element={<Layout><BookSuccess /></Layout>} />
       {/* Add your page Route elements here */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
