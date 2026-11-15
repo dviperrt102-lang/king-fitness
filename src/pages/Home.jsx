@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { Dumbbell, ShieldCheck, Heart, Crown } from 'lucide-react';
+import BrotherhoodSignupModal from '@/components/BrotherhoodSignupModal';
 
 const PillarCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white/5 border border-white/10 rounded-lg p-8 text-center transition-all duration-300 hover:bg-white/10 hover:border-white/30">
@@ -26,6 +27,8 @@ const TestimonialCard = ({ text, author, role }) => (
 );
 
 export default function HomePage() {
+  const [signupOpen, setSignupOpen] = useState(false);
+
   return (
     <div>
       {/* Hero Section */}
@@ -39,12 +42,18 @@ export default function HomePage() {
             Empowering men to build spiritual foundations, physical strength, and unwavering leadership in their homes and communities.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" className="font-heading bg-white text-black hover:bg-white/90 h-12 px-8 text-2xl uppercase tracking-widest font-bold">
+            <Button
+              size="lg"
+              onClick={() => setSignupOpen(true)}
+              className="font-heading bg-white text-black hover:bg-white/90 h-12 px-8 text-2xl uppercase tracking-widest font-bold"
+            >
               Join the Brotherhood
             </Button>
           </div>
         </div>
       </section>
+
+      <BrotherhoodSignupModal open={signupOpen} onOpenChange={setSignupOpen} />
 
       {/* Logo & Mission Statement Section */}
       <section className="py-20 bg-black">
