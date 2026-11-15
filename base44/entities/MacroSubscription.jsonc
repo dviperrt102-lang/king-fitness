@@ -1,0 +1,59 @@
+{
+  "name": "MacroSubscription",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the member's login account; one subscription per member"
+    },
+    "stripe_subscription_id": {
+      "type": "string",
+      "description": "Stripe subscription ID for the macro plan"
+    },
+    "stripe_customer_id": {
+      "type": "string",
+      "description": "Stripe customer ID paying for the subscription"
+    },
+    "status": {
+      "type": "string",
+      "description": "Stripe subscription status, e.g. active, trialing, past_due, canceled, pending"
+    },
+    "current_period_end": {
+      "type": "string",
+      "format": "date",
+      "description": "End date of the current paid period"
+    }
+  },
+  "required": [
+    "user_email"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

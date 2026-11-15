@@ -8,12 +8,21 @@ import MacroCards from "@/components/nutrition/MacroCards";
 import FocusScripture from "@/components/nutrition/FocusScripture";
 import WeeklyCheckInForm from "@/components/nutrition/WeeklyCheckInForm";
 import CheckInHistory from "@/components/nutrition/CheckInHistory";
+import NutritionPaywall from "@/components/nutrition/NutritionPaywall";
+import ManageSubscriptionButton from "@/components/nutrition/ManageSubscriptionButton";
+
+const isActiveStatus = (status) =>
+  ["active", "trialing"].includes(String(status || "").toLowerCase());
 
 export default function Nutrition() {
   const { user } = useAuth();
   const [profile, setProfile] = useState(null);
+  const [subscription, setSubscription] = useState(null);
   const [checkIns, setCheckIns] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [justPaid] = useState(
+    () => new URLSearchParams(window.location.search).get("checkout") === "success"
+  );
 
   const loadCheckIns = async () => {
     const { items = [] } = await base44.entities.WeeklyCheckIn.filter(
@@ -26,16 +35,32 @@ export default function Nutrition() {
   useEffect(() => {
     if (!user?.email) return;
     const load = async () => {
-      const { items = [] } = await base44.entities.MacroProfile.filter(
-        { user_email: user.email },
-        { limit: 1 }
-      );
-      setProfile(items[0] || null);
+      const [profileRes, subRes] = await Promise.all([
+        base44.entities.MacroProfile.filter({ user_email: user.email }, { limit: 1 }),
+        base44.entities.MacroSubscription.filter({ user_email: user.email }, { limit: 1 }),
+      ]);
+      setProfile(profileRes.items?.[0] || null);
+      setSubscription(subRes.items?.[0] || null);
       await loadCheckIns();
       setLoading(false);
     };
     load();
   }, [user?.email]);
+
+  const isActive = isActiveStatus(subscription?.status);
+
+  // Returning from Stripe Checkout: the webhook may land a few seconds after the redirect.
+  useEffect(() => {
+    if (!justPaid || !user?.email || isActive) return;
+    const timer = setTimeout(async () => {
+      const { items = [] } = await base44.entities.MacroSubscription.filter(
+        { user_email: user.email },
+        { limit: 1 }
+      );
+      setSubscription(items[0] || null);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [justPaid, user?.email, isActive]);
 
   const handleCheckIn = async ({ weight_lb, hit_targets }) => {
     const updatedProfile = { ...profile, weight_lb };
@@ -76,6 +101,8 @@ export default function Nutrition() {
         <div className="container mx-auto px-4 max-w-3xl">
           {loading ? (
             <p className="text-white/50 font-heading uppercase tracking-widest text-center">Loading…</p>
+          ) : !isActive ? (
+            <NutritionPaywall justPaid={justPaid} />
           ) : !profile ? (
             <>
               <h2 className="text-3xl md:text-4xl text-white mb-2">Set Up Your Macros</h2>
@@ -92,6 +119,8 @@ export default function Nutrition() {
 
               <MacroCards macros={macros} goal={profile.goal} calculatedOn={calculatedOn} />
 
+              <ManageSubscriptionButton />
+
               <div>
                 <h2 className="text-3xl md:text-4xl text-white mb-2">Weekly Check-In</h2>
                 <p className="text-white/60 leading-relaxed mb-6">
@@ -103,7 +132,7 @@ export default function Nutrition() {
               </div>
 
               <div>
-                <h2 className="text-3xl md:text-4xl text-white mb-6">Check-In History</h2>
+                <h2 className="text-3xl md:text-4xl text-white mb-4">Check-In History</h2>
                 <CheckInHistory checkIns={checkIns} />
               </div>
             </div>
