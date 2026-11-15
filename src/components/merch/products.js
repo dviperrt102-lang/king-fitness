@@ -39,10 +39,11 @@ export const MERCH_PRODUCTS = [
     image:
       "https://cdn.shopify.com/s/files/1/0779/5245/0815/files/unisex-garment-dyed-heavyweight-t-shirt-black-front-68efd05fb2665_medium.jpg?v=1760546919",
     colors: ["Black", "True Navy"],
-    // Printful has no mockup for True Navy, so it falls back to `image`.
     colorImages: {
       Black:
         "https://files.cdn.printful.com/files/041/041a29227053d59a290d6ea484e4f009_preview.png",
+      "True Navy":
+        "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5bd05a2c2_king-fitness-classic-vintage-tee-true-navy-front.png",
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
