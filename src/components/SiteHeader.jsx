@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
+import { useAuth } from "@/lib/AuthContext";
 
 export const LOGO_URL =
   "https://media.base44.com/images/public/68a3616f46b64caea80fe05b/99121f49f_IMG_1786.jpeg";
@@ -12,10 +13,12 @@ const navigationItems = [
   { title: "Workouts", url: createPageUrl("Workouts") },
   { title: "Devotionals", url: createPageUrl("Devotionals") },
   { title: "Community", url: createPageUrl("Community") },
+  { title: "Members", url: createPageUrl("Members") },
 ];
 
 export default function SiteHeader() {
   const { pathname } = useLocation();
+  const { user, isAuthenticated, logout } = useAuth();
 
   return (
     <header className="sticky top-0 z-50 bg-black border-b border-white/15">
@@ -52,6 +55,27 @@ export default function SiteHeader() {
                 {item.title}
               </Link>
             ))}
+            {isAuthenticated ? (
+              <span className="flex items-center gap-3 whitespace-nowrap">
+                <span className="font-heading text-base md:text-lg uppercase tracking-widest text-white">
+                  {user?.full_name || user?.email}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => logout()}
+                  className="font-heading text-base md:text-lg uppercase tracking-widest text-white/60 hover:text-white transition-colors"
+                >
+                  Sign Out
+                </button>
+              </span>
+            ) : (
+              <Link
+                to={`/login?returnTo=${encodeURIComponent(pathname)}`}
+                className="font-heading text-base md:text-lg uppercase tracking-widest whitespace-nowrap text-white/60 hover:text-white transition-colors"
+              >
+                Sign In
+              </Link>
+            )}
           </nav>
         </div>
       </div>

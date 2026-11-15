@@ -15,6 +15,13 @@ import BookSuccess from './pages/BookSuccess';
 import Merch from './pages/Merch';
 import MerchSuccess from './pages/MerchSuccess';
 import Layout from './Layout';
+import Members from './pages/Members';
+import MembersSignInPrompt from '@/components/members/MembersSignInPrompt';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -52,6 +59,13 @@ const AuthenticatedApp = () => {
       <Route path="/BookSuccess" element={<Layout><BookSuccess /></Layout>} />
       <Route path="/Merch" element={<Layout><Merch /></Layout>} />
       <Route path="/MerchSuccess" element={<Layout><MerchSuccess /></Layout>} />
+      <Route element={<Layout><ProtectedRoute unauthenticatedElement={<MembersSignInPrompt />} /></Layout>}>
+        <Route path="/Members" element={<Members />} />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       {/* Add your page Route elements here */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>

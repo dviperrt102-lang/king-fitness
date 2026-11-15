@@ -1,0 +1,57 @@
+{
+  "name": "MemberDocument",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the document"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "Link to the uploaded file"
+    },
+    "sort_order": {
+      "type": "number",
+      "description": "Lower numbers appear first"
+    }
+  },
+  "required": [
+    "title",
+    "file_url"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "user"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
