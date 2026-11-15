@@ -11,7 +11,7 @@ export default function Workouts() {
 
   useEffect(() => {
     const load = async () => {
-      const { items } = await base44.entities.Workout.filter({}, { sort: "-date", limit: 50 });
+      const { items } = await base44.entities.Workout.filter({}, { sort: "date", limit: 50 });
       setWorkouts(items);
       setLoading(false);
     };
