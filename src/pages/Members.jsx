@@ -9,7 +9,10 @@ export default function Members() {
 
   useEffect(() => {
     const load = async () => {
-      const { items } = await base44.entities.MemberDocument.list("sort_order", 200);
+      const { items = [] } = await base44.entities.MemberDocument.filter(
+        {},
+        { sort: "sort_order", limit: 200 }
+      );
       items.sort(
         (a, b) =>
           (a.sort_order ?? 9999) - (b.sort_order ?? 9999) ||
