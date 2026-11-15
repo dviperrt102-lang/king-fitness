@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
-import { Dumbbell, ShieldCheck, Heart, Crown } from 'lucide-react';
+import { Dumbbell, ShieldCheck, Heart, Crown, Flame } from 'lucide-react';
 import BrotherhoodSignupModal from '@/components/BrotherhoodSignupModal';
 
 const PillarCard = ({ icon: Icon, title, description }) => (
@@ -75,8 +75,9 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl text-white">Our Pillars</h2>
             <p className="text-lg text-white/60 mt-2 max-w-2xl mx-auto">The foundation upon which we build stronger men.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <PillarCard icon={Heart} title="Faith" description="Cultivating a genuine, resilient relationship with God as the cornerstone of true strength and identity." />
+            <PillarCard icon={Flame} title="Discipline" description="The daily practice that makes faith visible — showing up in prayer, in training, and in obedience, day after day." />
             <PillarCard icon={Dumbbell} title="Fitness" description="Pursuing physical excellence not for vanity, but as an act of stewardship and discipline." />
             <PillarCard icon={ShieldCheck} title="Leadership" description="Becoming the leaders God called us to be—in our lives, our homes, and our communities." />
           </div>
