@@ -21,7 +21,7 @@ const navigationItems = [
   { title: "Nutrition", url: createPageUrl("Nutrition") },
 ];
 
-const topBarTitles = ["Home", "The Book", "Merch", "Vision"];
+const topBarTitles = ["Home", "The Book", "Workouts", "Vision"];
 const topBarItems = navigationItems.filter((item) => topBarTitles.includes(item.title));
 
 export default function SiteHeader() {
