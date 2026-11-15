@@ -1,48 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
-
-const imageFor = (product, option) =>
-  (product.colorImages && product.colorImages[option]) || product.image;
+import ProductImageGallery from "@/components/merch/ProductImageGallery";
 
 export default function MerchProductCard({ product, onBuy }) {
   const [color, setColor] = useState(product.colors[0]);
   const [size, setSize] = useState(product.sizes[0] || "");
-  const [imageSrc, setImageSrc] = useState(() => imageFor(product, product.colors[0]));
-
-  // Warm the cache for every color so switching is instant.
-  useEffect(() => {
-    product.colors.forEach((option) => {
-      const preload = new Image();
-      preload.src = imageFor(product, option);
-    });
-  }, [product]);
-
-  // Swap only once the new mockup is ready, so the image never flashes empty.
-  useEffect(() => {
-    const next = imageFor(product, color);
-    if (next === imageSrc) return;
-    const loader = new Image();
-    const swap = () => setImageSrc(next);
-    loader.onload = swap;
-    loader.onerror = swap;
-    loader.src = next;
-    return () => {
-      loader.onload = null;
-      loader.onerror = null;
-    };
-  }, [color, product, imageSrc]);
 
   return (
     <div className="border border-white/20 rounded-lg bg-white/5 overflow-hidden flex flex-col">
-      <div className="aspect-square bg-white/10 overflow-hidden">
-        <img
-          src={imageSrc}
-          alt={`${product.name} in ${color}`}
-          loading="lazy"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <ProductImageGallery product={product} color={color} alt={product.name} />
 
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-xl text-white leading-tight mb-2">{product.name}</h3>
