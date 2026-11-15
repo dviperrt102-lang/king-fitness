@@ -58,9 +58,14 @@ export default function SiteHeader() {
             ))}
             {isAuthenticated ? (
               <span className="flex items-center gap-3 whitespace-nowrap">
-                <span className="font-heading text-base md:text-lg uppercase tracking-widest text-white">
-                  {user?.full_name || user?.email}
-                </span>
+                <Link
+                  to="/MyProfile"
+                  className={`font-heading text-base md:text-lg uppercase tracking-widest transition-colors ${
+                    pathname === "/MyProfile" ? "text-white" : "text-white/60 hover:text-white"
+                  }`}
+                >
+                  My Profile
+                </Link>
                 <button
                   type="button"
                   onClick={() => logout()}

@@ -1,0 +1,64 @@
+{
+  "name": "MemberProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the member's login account; links the profile to the account"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Name shown in the brothers directory"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short introduction written by the member"
+    },
+    "profile_picture": {
+      "type": "string",
+      "format": "image",
+      "description": "URL of the member's uploaded profile picture"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Optional contact phone number"
+    },
+    "instagram": {
+      "type": "string",
+      "description": "Optional Instagram handle"
+    },
+    "church": {
+      "type": "string",
+      "description": "Optional church the member attends"
+    }
+  },
+  "required": [
+    "user_email",
+    "display_name"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "user"
+          }
+        }
+      ]
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
