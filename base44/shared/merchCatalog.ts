@@ -20,7 +20,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "Forged in Fire - Unisex garment-dyed heavyweight t-shirt",
     printfulName: "Forged in Fire - Unisex garment-dyed heavyweight t-shirt",
     price: 3299,
-    colors: ["Black", "Blue Jean", "Blue Spruce", "Grey", "Navy", "Pepper"],
+    colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
   {
@@ -28,7 +28,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "God Strong - Unisex garment-dyed heavyweight t-shirt",
     printfulName: "God Strong - Unisex garment-dyed heavyweight t-shirt",
     price: 2999,
-    colors: ["Black", "Brick", "Denim", "Grey", "Navy"],
+    colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
   {
@@ -36,7 +36,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "King Fitness Classic - Vintage - Unisex garment-dyed heavyweight t-shirt",
     printfulName: "King Fitness Classic - Vintage - Unisex garment-dyed heavyweight t-shirt",
     price: 2999,
-    colors: ["Black", "Blue Spruce", "Brick", "Denim", "Granite", "Pepper", "True Navy"],
+    colors: ["Black", "True Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
   {
@@ -52,7 +52,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "God Strong - Unisex Oversized heavyweight hoodie",
     printfulName: "God Strong - Unisex Oversized heavyweight hoodie",
     price: 4999,
-    colors: ["Asphalt", "Black", "Forest", "Maroon", "Navy"],
+    colors: ["Black", "Asphalt"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
   },
   {
@@ -60,7 +60,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "Unisex Oversized heavyweight sweatshirt - Lion of Judah",
     printfulName: "Unisex Oversized heavyweight sweatshirt - Lion of Judah",
     price: 5499,
-    colors: ["Black", "Maroon", "Navy"],
+    colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
   },
   {
@@ -68,7 +68,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     name: "God Strong - Embroidered Beanie",
     printfulName: "God Strong - Embroidered Beanie",
     price: 2499,
-    colors: ["Black", "Dark green", "Gray", "Navy"],
+    colors: ["Black", "Gray"],
     sizes: [],
   },
   {
