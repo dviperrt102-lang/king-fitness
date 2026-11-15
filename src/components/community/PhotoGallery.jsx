@@ -2,24 +2,28 @@ import React from "react";
 
 const photos = [
   {
-    src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68a3616f46b64caea80fe05b/cc6b4a0df_KingFitness1.jpg",
-    alt: "As iron sharpens iron — King Fitness",
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/1b46cef01_nov14_brotherhood.jpg",
+    alt: "Saturday training at UFC GYM",
   },
   {
-    src: "https://images.unsplash.com/photo-1547919322-05b18a69a3b2?q=80&w=2070&auto=format&fit=crop",
-    alt: "Men training together",
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/4dfcb0896_oct25_sat_bible_study.jpg",
+    alt: "Saturday Bible study at the coffee shop",
   },
   {
-    src: "https://images.unsplash.com/photo-1623861266287-299584155b57?q=80&w=1974&auto=format&fit=crop",
-    alt: "Barbell work on a Saturday morning",
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2001dbae8_nov09_baptism.jpg",
+    alt: "The brothers at The Bay Church",
   },
   {
-    src: "https://images.unsplash.com/photo-1593811167563-a26a57ed6249?q=80&w=2070&auto=format&fit=crop",
-    alt: "Brothers in the gym",
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/76d7948d0_nov05_fellowship.jpg",
+    alt: "Praying together",
   },
   {
-    src: "https://images.unsplash.com/photo-1517926956350-2a40742b9a4c?q=80&w=1939&auto=format&fit=crop",
-    alt: "Training in the dark before sunrise",
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/fac60803f_oct18_community.jpg",
+    alt: "Bible study around the table",
+  },
+  {
+    src: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9593010bd_nov15_lead_with_love.jpg",
+    alt: "Saturday Bible study group",
   },
 ];
 
