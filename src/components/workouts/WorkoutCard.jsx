@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { ChevronDown, Flame, Dumbbell, Snowflake } from "lucide-react";
 
@@ -12,8 +12,13 @@ const ListBlock = ({ icon: Icon, title, children }) => (
   </div>
 );
 
-export default function WorkoutCard({ workout }) {
+export default function WorkoutCard({ workout, revealToken = 0 }) {
   const [open, setOpen] = useState(false);
+
+  // A split card can ask this workout to open itself.
+  useEffect(() => {
+    if (revealToken) setOpen(true);
+  }, [revealToken]);
 
   return (
     <div className="border border-white/20 rounded-lg bg-white/5">
