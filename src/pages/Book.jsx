@@ -132,25 +132,52 @@ export default function Book() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Get the Book */}
       <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <BookOpen className="w-10 h-10 text-white mx-auto mb-6" />
-          <h2 className="text-4xl md:text-5xl text-white mb-4">Get the Book</h2>
-          <p className="font-heading text-lg uppercase tracking-[0.2em] text-white/60 mb-10">
-            6 × 9 inch Paperback · 70 Pages · $9.99
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <BookOpen className="w-10 h-10 text-white mx-auto mb-6" />
+            <h2 className="text-4xl md:text-5xl text-white">Get the Book</h2>
+          </div>
 
-          <div className="flex flex-col items-center gap-4">
-            {/* TODO: replace with the live Amazon link once the book is published on KDP */}
-            <Button
-              size="lg"
-              disabled
-              className="font-heading bg-white text-black h-12 px-8 text-2xl uppercase tracking-widest font-bold opacity-50 cursor-not-allowed"
-            >
-              Coming Soon on Amazon — $9.99 Paperback
-            </Button>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Paperback */}
+            <div className="border border-white/20 rounded-lg p-8 bg-white/5 flex flex-col text-center">
+              <h3 className="text-2xl text-white mb-2">Paperback</h3>
+              <p className="font-display text-4xl text-white mb-3">$14.99</p>
+              <p className="text-white/60 leading-relaxed mb-6">6×9 inch, 70 pages</p>
+              {/* TODO: replace with the live Amazon link once the book is published on KDP */}
+              <Button
+                size="lg"
+                disabled
+                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold opacity-50 cursor-not-allowed mt-auto"
+              >
+                Coming Soon on Amazon
+              </Button>
+            </div>
 
+            {/* Digital PDF */}
+            <div className="border border-white/20 rounded-lg p-8 bg-white/5 flex flex-col text-center">
+              <h3 className="text-2xl text-white mb-2">Digital PDF</h3>
+              <p className="font-display text-4xl text-white mb-3">$9.99</p>
+              <p className="text-white/60 leading-relaxed mb-6">
+                Instant download — read on any device
+              </p>
+              {/* TODO: wire to Stripe checkout once the PDF is uploaded and Stripe is connected in Base44. */}
+              <Button
+                size="lg"
+                disabled
+                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold opacity-50 cursor-not-allowed mt-auto"
+              >
+                Buy the PDF — $9.99
+              </Button>
+              <p className="font-heading text-xs uppercase tracking-widest text-white/40 mt-3">
+                Checkout coming soon
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
             <a href="https://linktr.ee/king.fitness2717" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
