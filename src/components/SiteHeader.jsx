@@ -13,6 +13,7 @@ const navigationItems = [
   { title: "Workouts", url: createPageUrl("Workouts") },
   { title: "Devotionals", url: createPageUrl("Devotionals") },
   { title: "Community", url: createPageUrl("Community") },
+  { title: "Vision", url: createPageUrl("Vision") },
   { title: "Members", url: createPageUrl("Members") },
   { title: "Chat", url: createPageUrl("Chat") },
   { title: "Nutrition", url: createPageUrl("Nutrition") },

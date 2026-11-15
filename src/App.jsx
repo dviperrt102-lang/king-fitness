@@ -11,6 +11,7 @@ import Book from './pages/Book';
 import Workouts from './pages/Workouts';
 import Devotionals from './pages/Devotionals';
 import Community from './pages/Community';
+import Vision from './pages/Vision';
 import BookSuccess from './pages/BookSuccess';
 import Merch from './pages/Merch';
 import MerchSuccess from './pages/MerchSuccess';
@@ -62,6 +63,7 @@ const AuthenticatedApp = () => {
       <Route path="/Workouts" element={<Layout><Workouts /></Layout>} />
       <Route path="/Devotionals" element={<Layout><Devotionals /></Layout>} />
       <Route path="/Community" element={<Layout><Community /></Layout>} />
+      <Route path="/Vision" element={<Layout><Vision /></Layout>} />
       <Route path="/BookSuccess" element={<Layout><BookSuccess /></Layout>} />
       <Route path="/Merch" element={<Layout><Merch /></Layout>} />
       <Route path="/MerchSuccess" element={<Layout><MerchSuccess /></Layout>} />
