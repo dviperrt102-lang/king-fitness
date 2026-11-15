@@ -1,7 +1,7 @@
 // Server-owned catalog for the "30-Day Devotional — Digital PDF" product.
 // Buyers may only pick this product; price, currency and file live here, never in the browser.
 
-export const PDF_PRICE_ID = "price_1UbuK2Em9oU2q4GV9IZufsob";
+export const PDF_PRICE_ID = "price_1UbuaxINDFbFUAGCmxDzMKUw";
 export const PDF_PRODUCT_NAME = "30-Day Devotional — Digital PDF";
 export const PDF_AMOUNT = 999;
 export const PDF_CURRENCY = "usd";
