@@ -18,9 +18,11 @@ import Layout from './Layout';
 import Members from './pages/Members';
 import Chat from './pages/Chat';
 import MyProfile from './pages/MyProfile';
+import Nutrition from './pages/Nutrition';
 import MembersSignInPrompt from '@/components/members/MembersSignInPrompt';
 import ChatSignInPrompt from '@/components/chat/ChatSignInPrompt';
 import ProfileSignInPrompt from '@/components/members/ProfileSignInPrompt';
+import NutritionSignInPrompt from '@/components/nutrition/NutritionSignInPrompt';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -71,6 +73,9 @@ const AuthenticatedApp = () => {
       </Route>
       <Route element={<Layout><ProtectedRoute unauthenticatedElement={<ChatSignInPrompt />} /></Layout>}>
         <Route path="/Chat" element={<Chat />} />
+      </Route>
+      <Route element={<Layout><ProtectedRoute unauthenticatedElement={<NutritionSignInPrompt />} /></Layout>}>
+        <Route path="/Nutrition" element={<Nutrition />} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

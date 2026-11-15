@@ -15,6 +15,7 @@ const navigationItems = [
   { title: "Community", url: createPageUrl("Community") },
   { title: "Members", url: createPageUrl("Members") },
   { title: "Chat", url: createPageUrl("Chat") },
+  { title: "Nutrition", url: createPageUrl("Nutrition") },
 ];
 
 export default function SiteHeader() {

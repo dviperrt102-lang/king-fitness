@@ -1,0 +1,72 @@
+{
+  "name": "WeeklyCheckIn",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the member's login account"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the check-in"
+    },
+    "weight_lb": {
+      "type": "number",
+      "description": "Bodyweight at check-in, in pounds"
+    },
+    "calories": {
+      "type": "number",
+      "description": "Calorie target calculated at this check-in"
+    },
+    "protein_g": {
+      "type": "number",
+      "description": "Protein target in grams"
+    },
+    "carbs_g": {
+      "type": "number",
+      "description": "Carbohydrate target in grams"
+    },
+    "fat_g": {
+      "type": "number",
+      "description": "Fat target in grams"
+    },
+    "hit_targets": {
+      "type": "string",
+      "description": "Whether last week's targets were hit",
+      "enum": [
+        "Yes",
+        "Mostly",
+        "No"
+      ]
+    }
+  },
+  "required": [
+    "user_email",
+    "date",
+    "weight_lb"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

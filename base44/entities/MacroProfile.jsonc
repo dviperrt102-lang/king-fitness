@@ -1,0 +1,83 @@
+{
+  "name": "MacroProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the member's login account; one macro profile per member"
+    },
+    "sex": {
+      "type": "string",
+      "description": "Used for the Mifflin-St Jeor equation",
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "default": "Male"
+    },
+    "age": {
+      "type": "number",
+      "description": "Age in years"
+    },
+    "height_feet": {
+      "type": "number",
+      "description": "Height, feet portion"
+    },
+    "height_inches": {
+      "type": "number",
+      "description": "Height, inches portion"
+    },
+    "weight_lb": {
+      "type": "number",
+      "description": "Current bodyweight in pounds"
+    },
+    "activity_level": {
+      "type": "string",
+      "description": "Daily activity level used for the TDEE multiplier",
+      "enum": [
+        "Sedentary",
+        "Lightly active",
+        "Moderately active",
+        "Very active",
+        "Extremely active"
+      ],
+      "default": "Moderately active"
+    },
+    "goal": {
+      "type": "string",
+      "description": "Nutrition goal",
+      "enum": [
+        "Lose weight",
+        "Maintain weight",
+        "Gain muscle"
+      ],
+      "default": "Maintain weight"
+    }
+  },
+  "required": [
+    "user_email"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
