@@ -1,7 +1,9 @@
 import React from "react";
-import { Building2, Dumbbell, BookOpen, Users } from "lucide-react";
+import { Building2, Dumbbell, BookOpen, Users, Heart } from "lucide-react";
 import FloorPlan from "@/components/vision/FloorPlan";
 import WaitlistForm from "@/components/vision/WaitlistForm";
+import GymFundProgress from "@/components/vision/GymFundProgress";
+import DonationForm from "@/components/vision/DonationForm";
 
 const anchors = [
   { icon: Dumbbell, label: "The Training" },
@@ -71,6 +73,23 @@ export default function Vision() {
             Six zones, one roof. This is the concept we're building toward.
           </p>
           <FloorPlan />
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 border-b border-white/10">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="flex items-center gap-3 mb-2">
+            <Heart className="w-7 h-7 text-white/60" />
+            <h2 className="text-3xl md:text-5xl text-white">Support the Vision</h2>
+          </div>
+          <p className="text-white/60 leading-relaxed mb-8">
+            Every gift moves the gym closer to a home of its own — the first milestone is the lease
+            deposit that secures the space.
+          </p>
+          <GymFundProgress />
+          <div className="mt-8">
+            <DonationForm />
+          </div>
         </div>
       </section>
 

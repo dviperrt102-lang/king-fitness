@@ -1,0 +1,67 @@
+{
+  "name": "GymDonation",
+  "type": "object",
+  "properties": {
+    "amount_cents": {
+      "type": "number",
+      "description": "Gift amount in cents, used to total the gym fund"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code, e.g. usd"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Donor email as provided at checkout (never displayed publicly)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid"
+      ],
+      "enumColors": [
+        "yellow",
+        "green"
+      ],
+      "default": "pending",
+      "description": "Server-verified payment status"
+    },
+    "stripe_session_id": {
+      "type": "string",
+      "description": "Stripe Checkout session that paid this gift"
+    },
+    "paid_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When payment was confirmed by Stripe"
+    }
+  },
+  "required": [
+    "amount_cents",
+    "status"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
