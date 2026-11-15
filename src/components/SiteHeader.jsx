@@ -14,6 +14,7 @@ const navigationItems = [
   { title: "Devotionals", url: createPageUrl("Devotionals") },
   { title: "Community", url: createPageUrl("Community") },
   { title: "Members", url: createPageUrl("Members") },
+  { title: "Chat", url: createPageUrl("Chat") },
 ];
 
 export default function SiteHeader() {
