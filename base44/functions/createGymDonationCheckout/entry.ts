@@ -21,6 +21,8 @@ export default async function (req) {
     const payload = await req.json().catch(() => ({}));
     const amountCents = Math.round(Number(payload?.amount_cents));
     const email = typeof payload?.email === "string" ? payload.email.trim() : "";
+    const donorName =
+      typeof payload?.name === "string" ? payload.name.trim().slice(0, 100) : "";
 
     if (
       !Number.isFinite(amountCents) ||
@@ -40,6 +42,7 @@ export default async function (req) {
     const donation = await base44.asServiceRole.entities.GymDonation.create({
       amount_cents: amountCents,
       currency: GYM_FUND_CURRENCY,
+      donor_name: donorName,
       email,
       status: "pending",
     });
@@ -58,6 +61,7 @@ export default async function (req) {
     body.set("metadata[base44_app_id]", process.env.BASE44_APP_ID || "");
     body.set("metadata[product]", GYM_FUND_PRODUCT);
     body.set("metadata[donation_id]", donation.id);
+    if (donorName) body.set("metadata[donor_name]", donorName);
     if (email) body.set("customer_email", email);
 
     const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {

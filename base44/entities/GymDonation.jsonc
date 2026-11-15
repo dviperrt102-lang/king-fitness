@@ -2,6 +2,10 @@
   "name": "GymDonation",
   "type": "object",
   "properties": {
+    "donor_name": {
+      "type": "string",
+      "description": "Name the donor gave at checkout (never displayed publicly)"
+    },
     "amount_cents": {
       "type": "number",
       "description": "Gift amount in cents, used to total the gym fund"

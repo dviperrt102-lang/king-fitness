@@ -29,7 +29,11 @@ export function isPaidGymDonationSession(session: any) {
 
 // Records/updates the gift server-side once Stripe confirms payment.
 export async function markGymDonationPaid(base44: any, session: any) {
-  const fields = {
+  const donorName = String(
+    session?.metadata?.donor_name || session?.customer_details?.name || ""
+  ).trim();
+
+  const fields: any = {
     stripe_session_id: session.id,
     email: session?.customer_details?.email || session?.customer_email || "",
     amount_cents: Math.round(Number(session?.amount_total) || 0),
@@ -37,6 +41,8 @@ export async function markGymDonationPaid(base44: any, session: any) {
     status: "paid",
     paid_at: new Date().toISOString(),
   };
+  // Never blank out a name captured at checkout.
+  if (donorName) fields.donor_name = donorName;
 
   const existing = await base44.asServiceRole.entities.GymDonation.filter(
     { stripe_session_id: session.id },

@@ -10,6 +10,7 @@ const PRESETS = [25, 50, 100, 250];
 export default function DonationForm() {
   const [preset, setPreset] = useState(50);
   const [custom, setCustom] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
@@ -23,6 +24,10 @@ export default function DonationForm() {
     e.preventDefault();
     setError("");
 
+    if (!name.trim()) {
+      setError("Please enter your name.");
+      return;
+    }
     if (!Number.isFinite(effectiveAmount) || effectiveAmount < 5 || effectiveAmount > 5000) {
       setError("Please give an amount between $5 and $5,000.");
       return;
@@ -41,6 +46,7 @@ export default function DonationForm() {
     try {
       const res = await base44.functions.invoke("createGymDonationCheckout", {
         amount_cents: Math.round(effectiveAmount * 100),
+        name: name.trim(),
         email: email.trim(),
       });
       const url = res.data?.url;
@@ -91,6 +97,18 @@ export default function DonationForm() {
             </button>
           );
         })}
+      </div>
+
+      <div className="mt-5">
+        <Label className="font-heading uppercase tracking-widest text-white/70">Name</Label>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          placeholder="Your name"
+          className="mt-2 bg-white/5 border-white/15 text-white placeholder:text-white/40 rounded-none focus-visible:ring-white/40"
+        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 mt-5">
