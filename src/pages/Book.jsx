@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { Heart, Brain, Cross, Crown, Target, Dumbbell, Users, BookOpen } from "lucide-react";
+import BrotherhoodSignupModal from "@/components/BrotherhoodSignupModal";
 
 const insideParts = [
   {
@@ -51,6 +52,7 @@ const pillars = [
 export default function Book() {
   const [checkingOut, setCheckingOut] = useState(false);
   const [checkoutError, setCheckoutError] = useState("");
+  const [signupOpen, setSignupOpen] = useState(false);
 
   const handleBuyPdf = async () => {
     setCheckoutError("");
@@ -227,15 +229,14 @@ export default function Book() {
           </div>
 
           <div className="text-center mt-10">
-            <a href="https://linktr.ee/king.fitness2717" target="_blank" rel="noopener noreferrer">
-              <Button
-                size="lg"
-                variant="outline"
-                className="font-heading border-white text-white hover:bg-white hover:text-black h-12 px-8 text-2xl uppercase tracking-widest font-bold"
-              >
-                Join the Brotherhood
-              </Button>
-            </a>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => setSignupOpen(true)}
+              className="font-heading border-white text-white hover:bg-white hover:text-black h-12 px-8 text-2xl uppercase tracking-widest font-bold"
+            >
+              Join the Brotherhood
+            </Button>
           </div>
         </div>
       </section>
@@ -248,6 +249,8 @@ export default function Book() {
           </p>
         </div>
       </section>
+
+      <BrotherhoodSignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </div>
   );
 }
