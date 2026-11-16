@@ -21,6 +21,9 @@ const insideParts = [
   },
 ];
 
+const coverImage =
+  "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d6b6bcf05_king-fitness-book-cover-front.jpg";
+
 const pillars = [
   {
     icon: Crown,
@@ -81,21 +84,32 @@ export default function Book() {
     <div>
       {/* Hero */}
       <section className="border-b border-white/10 py-20 md:py-28">
-        <div className="container mx-auto px-4 text-center">
-          <p className="font-heading text-sm uppercase tracking-[0.4em] text-white/50 mb-4">
-            King Fitness
-          </p>
-          <h1 className="text-5xl md:text-8xl text-white mb-4">30-DAY DEVOTIONAL</h1>
-          <p className="font-heading text-xl md:text-3xl uppercase tracking-widest text-white/70 mb-8">
-            One Movement: Intimacy, Renewal, Death to Self
-          </p>
-          <p className="max-w-3xl mx-auto text-lg text-white/60 leading-relaxed">
-            Thirty days to forge your legacy. Each day includes Scripture, a short reading,
-            reflection questions, prayer, a daily action, and a daily hybrid workout — built on a
-            seven-day split of chest, back, lower body, rest, shoulders and arms, conditioning, and
-            Sabbath rest. For men who want to lead themselves, their households, and their
-            communities.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="grid gap-10 md:grid-cols-[320px_1fr] md:items-center md:gap-14">
+            <div className="mx-auto w-full max-w-[320px]">
+              <img
+                src={coverImage}
+                alt="King Fitness 30-Day Devotional front cover"
+                className="w-full rounded-sm shadow-2xl shadow-black/70 ring-1 ring-white/10"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="font-heading text-sm uppercase tracking-[0.4em] text-white/50 mb-4">
+                King Fitness
+              </p>
+              <h1 className="text-5xl md:text-8xl text-white mb-4">30-DAY DEVOTIONAL</h1>
+              <p className="font-heading text-xl md:text-3xl uppercase tracking-widest text-white/70 mb-8">
+                One Movement: Intimacy, Renewal, Death to Self
+              </p>
+              <p className="text-lg text-white/60 leading-relaxed">
+                Thirty days to forge your legacy. Each day includes Scripture, a short reading,
+                reflection questions, prayer, a daily action, and a daily hybrid workout — built on a
+                seven-day split of chest, back, lower body, rest, shoulders and arms, conditioning, and
+                Sabbath rest. For men who want to lead themselves, their households, and their
+                communities.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
