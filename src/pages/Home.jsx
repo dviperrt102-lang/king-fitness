@@ -4,6 +4,7 @@ import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 import { Dumbbell, ShieldCheck, Heart, Crown, Flame } from 'lucide-react';
 import BrotherhoodSignupModal from '@/components/BrotherhoodSignupModal';
+import BookFeatureSection from '@/components/home/BookFeatureSection';
 
 const PillarCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white/5 border border-white/10 rounded-lg p-8 text-center transition-all duration-300 hover:bg-white/10 hover:border-white/30">
@@ -106,7 +107,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+      {/* The Book Section */}
+      <BookFeatureSection />
+
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
