@@ -166,15 +166,22 @@ export default function Book() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto border border-white/20 rounded-lg p-8 md:p-12 bg-white/5">
             <h2 className="text-3xl md:text-4xl text-white mb-6">My Testimony</h2>
-            <p className="text-lg text-white/80 leading-relaxed italic">
-              In 2022, Rich went through divorce, job loss, and financial hardship — and almost lost
-              his will to live. This is the prayer that came out of it: 'Lord, use my pain for
-              something. Use me to speak life into Men who are feeling the same way. I never want
-              any Man I know to ever think he is alone in this fight.' Read the full story in the
-              book.
-            </p>
-            <p className="font-heading text-lg uppercase tracking-widest text-white/60 mt-6 text-right">
-              — Rich, Founder of King Fitness
+            <div className="space-y-6">
+              <p className="text-lg text-white/80 leading-relaxed">
+                In 2022, I went through one of the worst years of my life. Divorce. Losing my job.
+                Financial hardship. You name it — I was going through it. I stopped working out. I
+                felt lost, broken, and forgotten. I almost lost my will to live.
+              </p>
+              <p className="text-lg text-white/80 leading-relaxed font-bold">BUT GOD…</p>
+              <p className="text-lg text-white/80 leading-relaxed">I fell to my knees.</p>
+              <p className="text-lg text-white/80 leading-relaxed">
+                I prayed a prayer that is still playing out every single day: “Lord, use my pain for
+                something. Use me to speak life into Men who are feeling the same way. I never want
+                any Man I know to ever think he is alone in this fight.”
+              </p>
+            </div>
+            <p className="font-heading text-sm uppercase tracking-widest text-white/50 mt-8">
+              Read the full story in the book.
             </p>
           </div>
         </div>
