@@ -64,7 +64,7 @@ export const MERCH_PRODUCTS = [
     images: {
       Asphalt: {
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/37a5aba96_507f325f9_lion-hoodie_asphalt_front.png",
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9822c68cb_lion-hoodie-asphalt-back-mockup.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/b7bc23774_lion-hoodie_asphalt_back.png",
       },
       "Vintage Black": {
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/45145e2ec_414f31a27_lion-hoodie_vintage-black_front.png",
