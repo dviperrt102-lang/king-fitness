@@ -18,7 +18,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "forged-in-fire-tee",
     name: "Forged in Fire - Unisex garment-dyed heavyweight t-shirt",
-    printfulName: "Forged in Fire - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "Forged in Fire - Unisex garment-dyed heavyweight t-shirt v2",
     price: 3299,
     colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
@@ -58,7 +58,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "lion-of-judah-sweatshirt",
     name: "Unisex Oversized heavyweight sweatshirt - Lion of Judah",
-    printfulName: "Unisex Oversized heavyweight sweatshirt - Lion of Judah",
+    printfulName: "Unisex Oversized heavyweight sweatshirt - Lion of Judah v2",
     price: 5499,
     colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],

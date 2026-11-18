@@ -12,12 +12,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "Navy"],
     images: {
       Black: {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/4b46eac79_forged-black-front-mockup.png",
-        back: `${PF}/b25/b25bd40fa4c9c2f6800eac5dd34dc2c2_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/24e6053d6_7825903a2_forged-tee_black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/18f5bec84_4758b2f9c_forged-tee_black_back.png",
       },
       Navy: {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/925f3c86b_forged-navy-front-mockup.png",
-        back: `${PF}/7bd/7bd0f01d7687dc2d9eb89faf07fa76a5_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/7ade0c3d1_02abbe50f_forged-tee_navy_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/c512ba7ac_bb7621f9e_forged-tee_navy_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
@@ -97,12 +97,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "Navy"],
     images: {
       Black: {
-        front: `${PF}/b0d/b0d2771448185d5edf4a718e76e860bc_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9fa6b347c_sweatshirt-black-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/6304ac7e3_63e5e7588_lion-judah_black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/7249c5907_88c2345e6_lion-judah_black_back.png",
       },
       Navy: {
-        front: `${PF}/9a0/9a09a7a832a11ff27af80ae065e73439_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/91537683e_sweatshirt-navy-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/b52f16ff8_657d60d1d_lion-judah_navy_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/8ca9132bf_d3da0c01a_lion-judah_navy_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
