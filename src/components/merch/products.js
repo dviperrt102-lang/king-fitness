@@ -63,12 +63,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Asphalt", "Vintage Black"],
     images: {
       Asphalt: {
-        front: `${PF}/a0e/a0ebb6cc3476e87fccd2aab4b58ccc35_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/37a5aba96_507f325f9_lion-hoodie_asphalt_front.png",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9822c68cb_lion-hoodie-asphalt-back-mockup.png",
       },
       "Vintage Black": {
-        front: `${PF}/36a/36ab0439edb934b6ebcf26ab17910fcb_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/35bb15066_lion-hoodie-vintageblack-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/45145e2ec_414f31a27_lion-hoodie_vintage-black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/fe0e4b72e_c9bbbd885_lion-hoodie_vintage-black_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
@@ -80,12 +80,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "Asphalt"],
     images: {
       Black: {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/148c4b1ff_godstrong-hoodie-black-front-mockup.png",
-        back: `${PF}/cd3/cd3f72a5a2d7452376016fd1f4d3e387_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/bbbe38659_c8955a94e_godstrong-hoodie_black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/32d5e9f3a_d3835ccf2_godstrong-hoodie_black_back.png",
       },
       Asphalt: {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/660d07d77_godstrong-hoodie-asphalt-front-mockup.png",
-        back: `${PF}/a7d/a7d600c97ec6ad946c61c59f702112d1_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/726206f1a_d9d9fe35c_godstrong-hoodie_asphalt_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/91f2fb5de_fc853da88_godstrong-hoodie_asphalt_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],

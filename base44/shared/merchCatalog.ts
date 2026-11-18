@@ -42,7 +42,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "lion-hoodie",
     name: "King Fitness Oversized Heavyweight Lion Hoodie",
-    printfulName: "King Fitness Oversized Heavyweight Lion Hoodie",
+    printfulName: "King Fitness Oversized Heavyweight Lion Hoodie v2",
     price: 4999,
     colors: ["Asphalt", "Vintage Black"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
@@ -50,7 +50,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "god-strong-hoodie",
     name: "God Strong - Unisex Oversized heavyweight hoodie",
-    printfulName: "God Strong - Unisex Oversized heavyweight hoodie",
+    printfulName: "God Strong - Unisex Oversized heavyweight hoodie v2",
     price: 4999,
     colors: ["Black", "Asphalt"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
