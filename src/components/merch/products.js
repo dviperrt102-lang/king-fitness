@@ -29,12 +29,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "Navy"],
     images: {
       Black: {
-        front: `${PF}/9e1/9e13a8c7c2eee4816162032ee1745a98_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/bf86da7c2_godstrong-tee-black-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9da7edad9_9a874a941_godstrong-tee_black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/83fad8c95_0e3bdd417_godstrong-tee_black_back.png",
       },
       Navy: {
-        front: `${PF}/276/276784aeef688fed38a1f5293f440718_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/00581efca_godstrong-tee-navy-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2619c9e71_adfd403a0_godstrong-tee_navy_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/b59c0acb5_a3b884fb9_godstrong-tee_navy_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
@@ -46,12 +46,12 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "True Navy"],
     images: {
       Black: {
-        front: `${PF}/041/041a29227053d59a290d6ea484e4f009_preview.png`,
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/3171aa897_vintage-black-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/35c7a5786_029f1a1be_classic-tee_black_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/51fb1119c_328a0feb9_classic-tee_black_back.png",
       },
       "True Navy": {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5bd05a2c2_king-fitness-classic-vintage-tee-true-navy-front.png",
-        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2dc1c7f74_vintage-truenavy-back-mockup.png",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d0dd43a54_5ad789d40_classic-tee_true-navy_front.png",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/c9d0e4331_fcd2b9db4_classic-tee_true-navy_back.png",
       },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],

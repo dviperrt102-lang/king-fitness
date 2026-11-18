@@ -26,7 +26,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "god-strong-tee",
     name: "God Strong - Unisex garment-dyed heavyweight t-shirt",
-    printfulName: "God Strong - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "God Strong - Unisex garment-dyed heavyweight t-shirt v2",
     price: 2999,
     colors: ["Black", "Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
@@ -34,7 +34,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "king-fitness-classic-vintage-tee",
     name: "King Fitness Classic - Vintage - Unisex garment-dyed heavyweight t-shirt",
-    printfulName: "King Fitness Classic - Vintage - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "King Fitness Classic - Vintage - Unisex garment-dyed heavyweight t-shirt v2",
     price: 2999,
     colors: ["Black", "True Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
