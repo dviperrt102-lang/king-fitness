@@ -156,7 +156,32 @@ export const MERCH_PRODUCTS = [
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/e1bfe4784_89687efd4_lovewell-hoodie_navy_front.jpg",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/457ae4b41_23d83b8ca_lovewell-hoodie_navy_back.jpg",
       },
+      "Vintage Black": {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/f11d1fd9e_a996d518f_lovewell-hoodie_vintage-black_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/0f7ce4862_aaa17dc4b_lovewell-hoodie_vintage-black_back.jpg",
+      },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+  },
+  {
+    key: "love-well-tee",
+    name: "Love Well - Lift Heavy - Unisex garment-dyed heavyweight t-shirt",
+    price: 2999,
+    colors: ["Black", "Blue Spruce", "Brick", "Denim", "Graphite", "Grey"],
+    images: {
+      Black: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/8ea08c3ac_0c1bb9f45_tee_black_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/dceebdf9d_f5c2a0957_lovewell-tee_black_back.jpg",
+      },
+      "Blue Spruce": {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/31b449975_796ef3888_tee_blue-spruce_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/c41ec4a3f_1c44ac7bd_lovewell-tee_blue-spruce_back.jpg",
+      },
+      Brick: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2d97d8190_35cfb84c1_tee_brick_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/0007edc6f_a6acc9393_lovewell-tee_brick_back.jpg",
+      },
+    },
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
 ];

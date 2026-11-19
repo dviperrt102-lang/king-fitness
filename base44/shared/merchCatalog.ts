@@ -87,6 +87,14 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     colors: ["Asphalt", "Forest", "Maroon", "Navy", "Vintage Black"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
   },
+  {
+    key: "love-well-tee",
+    name: "Love Well - Lift Heavy - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "Love Well - Lift Heavy - Unisex garment-dyed heavyweight t-shirt v2",
+    price: 2999,
+    colors: ["Black", "Blue Spruce", "Brick", "Denim", "Graphite", "Grey"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+  },
 ];
 
 export function findMerchProduct(key: string) {
