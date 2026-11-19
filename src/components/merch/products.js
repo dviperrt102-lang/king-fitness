@@ -243,6 +243,26 @@ export const MERCH_PRODUCTS = [
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5fe2e4852_27b60430e_tee_denim_front.jpg",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d97374c55_jesusking_denim_back.jpg",
       },
+      Graphite: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/cc63cadbb_tee_granite_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5b2acbbaf_jk_graphite_back.jpg",
+      },
+      Grey: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/3347f4eeb_606de600a_tee_grey_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9ae86d287_jk_grey_back.jpg",
+      },
+      Midnight: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/f7465ad9b_tee_midnight_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/6e3875f6b_jk_midnight_back.jpg",
+      },
+      Navy: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/de37a90bc_tee_navy_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/020a4ab3e_jk_navy_back.jpg",
+      },
+      Pepper: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/4ee72ce2e_tee_pepper_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/f72ba8817_jk_pepper_back.jpg",
+      },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
