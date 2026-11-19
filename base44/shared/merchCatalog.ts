@@ -103,6 +103,14 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     colors: ["Black", "Blue Spruce", "Brick", "Denim", "Granite", "True Navy"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
+  {
+    key: "jesus-is-king-tee",
+    name: "Jesus is King - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "Jesus is King - Unisex garment-dyed heavyweight t-shirt v2",
+    price: 3299,
+    colors: ["Black", "Denim", "Graphite", "Grey", "Midnight", "Navy", "Pepper"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+  },
 ];
 
 export function findMerchProduct(key: string) {

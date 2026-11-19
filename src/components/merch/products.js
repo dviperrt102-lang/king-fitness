@@ -210,6 +210,39 @@ export const MERCH_PRODUCTS = [
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/31b449975_796ef3888_tee_blue-spruce_front.jpg",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/48971a5e4_fbc9aa527_phil121-tee_blue-spruce_back.jpg",
       },
+      Brick: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2d97d8190_35cfb84c1_tee_brick_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/9cb26b2c2_phil121_brick_back.jpg",
+      },
+      Denim: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5fe2e4852_27b60430e_tee_denim_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/82d39a0c2_phil121_denim_back.jpg",
+      },
+      Granite: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/cc63cadbb_tee_granite_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/e65fde626_phil121_granite_back.jpg",
+      },
+      "True Navy": {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/b86538462_tee_true_navy_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/70550d3c1_phil121_true_navy_back.jpg",
+      },
+    },
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+  },
+  {
+    key: "jesus-is-king-tee",
+    name: "Jesus is King - Unisex garment-dyed heavyweight t-shirt",
+    price: 3299,
+    colors: ["Black", "Denim", "Graphite", "Grey", "Midnight", "Navy", "Pepper"],
+    images: {
+      Black: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/8ea08c3ac_0c1bb9f45_tee_black_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/65669bd9a_jesusking_black_back.jpg",
+      },
+      Denim: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5fe2e4852_27b60430e_tee_denim_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d97374c55_jesusking_denim_back.jpg",
+      },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
