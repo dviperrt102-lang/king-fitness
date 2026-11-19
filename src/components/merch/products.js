@@ -134,4 +134,29 @@ export const MERCH_PRODUCTS = [
     },
     sizes: [],
   },
+  {
+    key: "love-well-hoodie",
+    name: "Love Well - Lift Heavy - Unisex Oversized heavyweight hoodie",
+    price: 4999,
+    colors: ["Asphalt", "Forest", "Maroon", "Navy", "Vintage Black"],
+    images: {
+      Asphalt: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/fb9c71944_899775eba_lovewell-hoodie_asphalt_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/c73f6e88d_6d30451f5_lovewell-hoodie_asphalt_back.jpg",
+      },
+      Forest: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/0d1fc848c_6888291b8_lovewell-hoodie_forest_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d91a6fbde_ffb476a8e_lovewell-hoodie_forest_back.jpg",
+      },
+      Maroon: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/a0786dcf2_c04f03cfe_lovewell-hoodie_maroon_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/306761183_9d432ccd6_lovewell-hoodie_maroon_back.jpg",
+      },
+      Navy: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/e1bfe4784_89687efd4_lovewell-hoodie_navy_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/457ae4b41_23d83b8ca_lovewell-hoodie_navy_back.jpg",
+      },
+    },
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+  },
 ];

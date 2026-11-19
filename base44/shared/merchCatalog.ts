@@ -79,6 +79,14 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     colors: ["Black"],
     sizes: [],
   },
+  {
+    key: "love-well-hoodie",
+    name: "Love Well - Lift Heavy - Unisex Oversized heavyweight hoodie",
+    printfulName: "Love Well - Lift Heavy - Unisex Oversized heavyweight hoodie v2",
+    price: 4999,
+    colors: ["Asphalt", "Forest", "Maroon", "Navy", "Vintage Black"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+  },
 ];
 
 export function findMerchProduct(key: string) {
