@@ -244,7 +244,7 @@ export const MERCH_PRODUCTS = [
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d97374c55_jesusking_denim_back.jpg",
       },
       Graphite: {
-        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/cc63cadbb_tee_granite_front.jpg",
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/1ea8c8c0e_0cfc5d112_tee_graphite_front.jpg",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5b2acbbaf_jk_graphite_back.jpg",
       },
       Grey: {
