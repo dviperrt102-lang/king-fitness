@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const viewsFor = (product, color) => (product.images && product.images[color]) || {};
+const viewsFor = (product, color) => {
+  const images = product.images || {};
+  if (images[color]) return images[color];
+  // A color whose photos haven't been added yet falls back to the first available set.
+  return Object.values(images).find((set) => set && set.front) || {};
+};
 
 export default function ProductImageGallery({ product, color, alt }) {
   const views = viewsFor(product, color);

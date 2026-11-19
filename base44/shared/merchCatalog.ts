@@ -95,6 +95,14 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
     colors: ["Black", "Blue Spruce", "Brick", "Denim", "Graphite", "Grey"],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
+  {
+    key: "phil-121-tee",
+    name: "PHIL 1:21 - Unisex garment-dyed heavyweight t-shirt",
+    printfulName: "PHIL 1:21 - Unisex garment-dyed heavyweight t-shirt v2",
+    price: 3299,
+    colors: ["Black", "Blue Spruce", "Brick", "Denim", "Granite", "True Navy"],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+  },
 ];
 
 export function findMerchProduct(key: string) {

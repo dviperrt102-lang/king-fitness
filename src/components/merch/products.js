@@ -181,6 +181,35 @@ export const MERCH_PRODUCTS = [
         front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2d97d8190_35cfb84c1_tee_brick_front.jpg",
         back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/0007edc6f_a6acc9393_lovewell-tee_brick_back.jpg",
       },
+      Denim: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/5fe2e4852_27b60430e_tee_denim_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/b9011843c_3bc62d8c9_lovewell-tee_denim_back.jpg",
+      },
+      Graphite: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/1ea8c8c0e_0cfc5d112_tee_graphite_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/0f22c7004_2156b9b9e_lovewell-tee_graphite_back.jpg",
+      },
+      Grey: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/3347f4eeb_606de600a_tee_grey_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/ff36581c5_816eb8118_lovewell-tee_grey_back.jpg",
+      },
+    },
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+  },
+  {
+    key: "phil-121-tee",
+    name: "PHIL 1:21 - Unisex garment-dyed heavyweight t-shirt",
+    price: 3299,
+    colors: ["Black", "Blue Spruce", "Brick", "Denim", "Granite", "True Navy"],
+    images: {
+      Black: {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/8ea08c3ac_0c1bb9f45_tee_black_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/2f672dec1_9cd9c5dad_phil121-tee_black_back.jpg",
+      },
+      "Blue Spruce": {
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/31b449975_796ef3888_tee_blue-spruce_front.jpg",
+        back: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/48971a5e4_fbc9aa527_phil121-tee_blue-spruce_back.jpg",
+      },
     },
     sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
   },
