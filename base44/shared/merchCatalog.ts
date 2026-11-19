@@ -66,7 +66,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "god-strong-beanie",
     name: "God Strong - Embroidered Beanie",
-    printfulName: "God Strong - Embroidered Beanie",
+    printfulName: "God Strong - Embroidered Beanie v2",
     price: 2499,
     colors: ["Black", "Gray"],
     sizes: [],
@@ -74,7 +74,7 @@ export const MERCH_PRODUCTS: MerchProduct[] = [
   {
     key: "god-strong-snapback",
     name: "God Strong SnapBack - Snapback Hat",
-    printfulName: "God Strong SnapBack - Snapback Hat",
+    printfulName: "God Strong SnapBack - Snapback Hat v2",
     price: 3499,
     colors: ["Black"],
     sizes: [],

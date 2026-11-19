@@ -114,10 +114,10 @@ export const MERCH_PRODUCTS = [
     colors: ["Black", "Gray"],
     images: {
       Black: {
-        front: `${PF}/3b4/3b4e9d23d0da1c2fc0d769775af8c25c_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/07cef8f4b_9a1bc56cf_beanie_black_front.png",
       },
       Gray: {
-        front: `${PF}/db9/db9ecf0aa2d853109b29566d0f896579_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/1446aceaa_bcb31b3f1_beanie_gray_front.png",
       },
     },
     sizes: [],
@@ -129,7 +129,7 @@ export const MERCH_PRODUCTS = [
     colors: ["Black"],
     images: {
       Black: {
-        front: `${PF}/a3b/a3bcf790f94e53c00197373cd1e532f4_preview.png`,
+        front: "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/c764e23d4_fae558754_snapback_black_front.png",
       },
     },
     sizes: [],
