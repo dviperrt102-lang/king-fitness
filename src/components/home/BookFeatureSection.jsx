@@ -4,7 +4,7 @@ import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 
 const coverImage =
-  "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/bba75cdd0_king-fitness-book-cover.jpg";
+  "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/a7bab37ea_forge-your-legacy-cover-v5.jpeg";
 
 export default function BookFeatureSection() {
   return (

@@ -23,7 +23,7 @@ const insideParts = [
 ];
 
 const coverImage =
-  "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/d6b6bcf05_king-fitness-book-cover-front.jpg";
+  "https://base44.app/api/apps/68a3616f46b64caea80fe05b/files/mp/public/68a3616f46b64caea80fe05b/a7bab37ea_forge-your-legacy-cover-v5.jpeg";
 
 const pillars = [
   {
