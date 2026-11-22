@@ -38,6 +38,11 @@ export default function BookFeatureSection() {
                 Get the Book
               </Button>
             </Link>
+            <Link to={createPageUrl("Book")} className="block mt-4">
+              <p className="text-white/60 leading-relaxed hover:text-white transition-colors">
+                Paperback out Dec 1 — get notified when it's live.
+              </p>
+            </Link>
           </div>
         </div>
       </div>

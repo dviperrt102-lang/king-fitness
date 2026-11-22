@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { Heart, Brain, Cross, Crown, Target, Dumbbell, Users, BookOpen } from "lucide-react";
 import BrotherhoodSignupModal from "@/components/BrotherhoodSignupModal";
+import BookNotifyForm from "@/components/book/BookNotifyForm";
 
 const insideParts = [
   {
@@ -209,6 +210,7 @@ export default function Book() {
               >
                 Coming Soon on Amazon
               </Button>
+              <BookNotifyForm />
             </div>
 
             {/* Digital PDF */}
