@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { base44 } from "@/api/base44Client";
 import { Heart, Brain, Cross, Crown, Target, Dumbbell, Users, BookOpen } from "lucide-react";
 import BrotherhoodSignupModal from "@/components/BrotherhoodSignupModal";
-import BookNotifyForm from "@/components/book/BookNotifyForm";
 
 const insideParts = [
   {
@@ -202,15 +201,19 @@ export default function Book() {
               <h3 className="text-2xl text-white mb-2">Paperback</h3>
               <p className="font-display text-4xl text-white mb-3">$14.99</p>
               <p className="text-white/60 leading-relaxed mb-6">6×9 inch, 70 pages</p>
-              {/* TODO: replace with the live Amazon link once the book is published on KDP */}
               <Button
+                asChild
                 size="lg"
-                disabled
-                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold opacity-50 cursor-not-allowed mt-auto"
+                className="font-heading bg-white text-black h-12 px-6 text-xl uppercase tracking-widest font-bold hover:bg-white/90 mt-auto"
               >
-                Coming Soon on Amazon
+                <a
+                  href="https://www.amazon.com/dp/B0HSPPF6VF"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy on Amazon — $14.99
+                </a>
               </Button>
-              <BookNotifyForm />
             </div>
 
             {/* Digital PDF */}
